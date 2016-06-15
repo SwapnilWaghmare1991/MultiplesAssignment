@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="J6g-6h-mUK">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Multiples of Number-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="7" borderStyle="roundedRect" placeholder="enter number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejB-Uq-o1U">
+                                <rect key="frame" x="100" y="81" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oxj-bn-RLN"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4f-fq-nzY">
+                                <rect key="frame" x="100" y="119" width="120" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Print Multiples">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_Event_PrintMultiples:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LXN-VP-khr"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Numbers are:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fjy-vc-jMH">
+                                <rect key="frame" x="40" y="170" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ejB-Uq-o1U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="3Bj-um-VAf"/>
+                            <constraint firstItem="ejB-Uq-o1U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="84" id="A2w-nS-1w9"/>
+                            <constraint firstItem="Q4f-fq-nzY" firstAttribute="top" secondItem="ejB-Uq-o1U" secondAttribute="bottom" constant="8" symbolic="YES" id="Acm-aQ-KDr"/>
+                            <constraint firstItem="Fjy-vc-jMH" firstAttribute="top" secondItem="Q4f-fq-nzY" secondAttribute="bottom" constant="21" id="BhO-W2-Wl1"/>
+                            <constraint firstItem="Fjy-vc-jMH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="IXo-bz-VIw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fjy-vc-jMH" secondAttribute="bottom" constant="270" id="Lom-OU-LN7"/>
+                            <constraint firstItem="ejB-Uq-o1U" firstAttribute="trailing" secondItem="Q4f-fq-nzY" secondAttribute="trailing" id="SC0-6S-mDs"/>
+                            <constraint firstItem="ejB-Uq-o1U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eHZ-IM-8TE"/>
+                            <constraint firstItem="ejB-Uq-o1U" firstAttribute="leading" secondItem="Q4f-fq-nzY" secondAttribute="leading" id="ikA-gH-WAq"/>
+                            <constraint firstItem="Q4f-fq-nzY" firstAttribute="centerX" secondItem="Fjy-vc-jMH" secondAttribute="centerX" id="nPb-04-Cdj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Multiples of Number" id="SKK-sO-jUV"/>
+                    <connections>
+                        <outlet property="txtFieldNumber" destination="ejB-Uq-o1U" id="M9L-2w-y1E"/>
+                        <outlet property="txtViewNumbers" destination="Fjy-vc-jMH" id="bBM-OG-omW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gG3-If-JC9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J6g-6h-mUK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nqj-we-AbR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TAg-sr-4qV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PwY-Gn-XGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107" y="201"/>
+        </scene>
+    </scenes>
+</document>
